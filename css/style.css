@@ -556,7 +556,7 @@ body {
 }
 
 .home {
-  background-color: red;
+  background-color: green;
 }
 
 @media (min-width: 768px) {
