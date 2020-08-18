@@ -9,11 +9,12 @@ html(lang="en")
 
         link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
     body
-        include header.pug
+        //- include header.pug
+        .wrapper
 
-        main.main_content
-            block content
+            main.main_content
+                block content
 
-        include footer.pug
+            include footer.pug
 
         include scripts.pug

@@ -12,13 +12,27 @@
 @import 'variables/variables';
 @import 'core/reset';
 @import 'core/template';
-@import 'core/header';
-@import 'core/navbar';
+// @import 'core/header';
+// @import 'core/navbar';
 @import 'core/footer';
-@import 'core/form';
-@import 'core/grid';
-@import 'core/soc';
-@import 'core/breadcrumb';
-@import 'core/pagination';
-@import 'core/buttons';
+// @import 'core/form';
+// @import 'core/grid';
+// @import 'core/soc';
+// @import 'core/breadcrumb';
+// @import 'core/pagination';
+// @import 'core/buttons';
 @import 'core/video';
+
+.wrapper {
+    overflow: hidden;
+}
+
+.home {
+    background-color: red;
+}
+
+.home__left {
+    @media (min-width: 768px) {
+        width: 32.375em;
+    }
+}
