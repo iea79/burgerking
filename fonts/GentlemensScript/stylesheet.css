@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gentlemens Script';
+    src: url('GentlemensScript-Regular.eot');
+    src: url('GentlemensScript-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GentlemensScript-Regular.woff2') format('woff2'),
+        url('GentlemensScript-Regular.woff') format('woff'),
+        url('GentlemensScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

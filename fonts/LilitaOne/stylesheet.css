@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Lilita One Rus';
+    src: url('LilitaOneRus.eot');
+    src: url('LilitaOneRus.eot?#iefix') format('embedded-opentype'),
+        url('LilitaOneRus.woff2') format('woff2'),
+        url('LilitaOneRus.woff') format('woff'),
+        url('LilitaOneRus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

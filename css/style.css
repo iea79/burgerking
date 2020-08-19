@@ -5,12 +5,35 @@
  * Skype: ivanov_ea
  *
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900);
 @font-face {
-  font-family: "ArialMT";
+  font-family: "BerlingskeSans-Tn";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/BerlingskeSans-Tn/BerlingskeSans-Tn.eot?") format("eot"), url("../fonts/BerlingskeSans-Tn/BerlingskeSans-Tn.woff2") format("woff2"), url("../fonts/BerlingskeSans-Tn/BerlingskeSans-Tn.woff") format("woff"), url("../fonts/BerlingskeSans-Tn/BerlingskeSans-Tn.ttf") format("truetype"), url("../fonts/BerlingskeSans-Tn/BerlingskeSans-Tn.svg#BerlingskeSans-Tn") format("svg");
+}
+@font-face {
+  font-family: "Dinamight RUS-LAT";
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/CenturyGothic.eot?") format("eot"), url("fonts/CenturyGothic.woff2") format("woff2"), url("fonts/CenturyGothic.woff") format("woff"), url("fonts/CenturyGothic.ttf") format("truetype"), url("fonts/CenturyGothic.svg#ArialMT") format("svg");
+  src: url("../fonts/Dinamight-RUS-LAT/DinamightRUS-LAT.eot?") format("eot"), url("../fonts/Dinamight-RUS-LAT/DinamightRUS-LAT.woff2") format("woff2"), url("../fonts/Dinamight-RUS-LAT/DinamightRUS-LAT.woff") format("woff"), url("../fonts/Dinamight-RUS-LAT/DinamightRUS-LAT.ttf") format("truetype"), url("../fonts/Dinamight-RUS-LAT/DinamightRUS-LAT.svg#Dinamight_RUS-LAT") format("svg");
+}
+@font-face {
+  font-family: "Gentlemens Script";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/GentlemensScript/GentlemensScript-Regular.eot?") format("eot"), url("../fonts/GentlemensScript/GentlemensScript-Regular.woff2") format("woff2"), url("../fonts/GentlemensScript/GentlemensScript-Regular.woff") format("woff"), url("../fonts/GentlemensScript/GentlemensScript-Regular.ttf") format("truetype"), url("../fonts/GentlemensScript/GentlemensScript-Regular.svg#Gentlemens_Script") format("svg");
+}
+@font-face {
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/LilitaOne/LilitaOneRus.eot?") format("eot"), url("../fonts/LilitaOne/LilitaOneRus.woff2") format("woff2"), url("../fonts/LilitaOne/LilitaOneRus.woff") format("woff"), url("../fonts/LilitaOne/LilitaOneRus.ttf") format("truetype"), url("../fonts/LilitaOne/LilitaOneRus.svg#Lilita_One_Rus") format("svg");
+}
+@font-face {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Muller/MullerRegular.eot?") format("eot"), url("../fonts/Muller/MullerRegular.woff2") format("woff2"), url("../fonts/Muller/MullerRegular.woff") format("woff"), url("../fonts/Muller/MullerRegular.ttf") format("truetype"), url("../fonts/Muller/MullerRegular.svg#Muller") format("svg");
 }
 /* Global variables */
 /* ======================================================================== */
@@ -60,7 +83,7 @@ html {
 body {
   margin: 0;
   font-size: 100%;
-  font-family: "Open Sans";
+  font-family: "BerlingskeSans-Tn";
   color: #000;
   line-height: 1.2;
 }
@@ -493,7 +516,7 @@ body {
 }
 
 .wrapper {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 /* Middle
@@ -503,7 +526,7 @@ body {
 }
 
 .container_center {
-  max-width: 1200px;
+  max-width: 75em;
   padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
@@ -551,16 +574,119 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .home__left {
+    width: 32.375em;
+  }
+}
+
 .wrapper {
   overflow: hidden;
 }
 
 .home {
-  background-color: green;
+  background: red;
+}
+.home__content {
+  max-width: 106em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em 2em;
+  width: 100%;
+}
+.home__title {
+  margin: 0;
+  padding: 1em 0;
+  font-family: "Berlingske Sans - Tn";
+  color: #ffffff;
+  opacity: 0.43;
+  font-size: 1.375em;
+  letter-spacing: 0.003em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.home__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__play {
+  position: relative;
+  border-radius: 50%;
+  width: 4.688em;
+  cursor: pointer;
+  z-index: 1;
+}
+.home__play:after, .home__play:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  top: -50%;
+  left: -50%;
+}
+.home__play:before {
+  width: 9.063em;
+  height: 9.063em;
+  border: 0.063em solid #ffd800;
+  opacity: 0.53;
+}
+.home__play:after {
+  width: 15em;
+  height: 15em;
+  border: 0.063em solid #ffd800;
+}
+.logo__title {
+  color: #ffffff;
+  font-family: "Berlingske Sans";
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.logo__img {
+  width: 32.375em;
+  height: 32.688em;
 }
 
-@media (min-width: 768px) {
-  .home__left {
-    width: 32.375em;
-  }
+.burger {
+  position: relative;
+  height: 46em;
+  width: 27em;
+}
+.burger__item {
+  position: absolute;
+}
+.burger__item:nth-child(1) {
+  width: 24.313em;
+  top: 0;
+}
+.burger__item:nth-child(2) {
+  width: 30.125em;
+  top: 3em;
+  right: -2em;
+}
+.burger__item:nth-child(3) {
+  width: 25.5em;
+  top: 22.5em;
+  right: 0.2em;
+}
+.burger__item:nth-child(4) {
+  width: 32.875em;
+  top: 22em;
+}
+.burger__item:nth-child(5) {
+  width: 25.375em;
+  bottom: 8em;
+  right: -0.3em;
+  z-index: 1;
+}
+.burger__item:nth-child(6) {
+  width: 33.188em;
+  bottom: 6em;
+  right: 2em;
+}
+.burger__item:nth-child(7) {
+  width: 26.313em;
+  bottom: 0;
 }

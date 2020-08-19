@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Dinamight RUS-LAT';
+    src: url('DinamightRUS-LAT.eot');
+    src: url('DinamightRUS-LAT.eot?#iefix') format('embedded-opentype'),
+        url('DinamightRUS-LAT.woff2') format('woff2'),
+        url('DinamightRUS-LAT.woff') format('woff'),
+        url('DinamightRUS-LAT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

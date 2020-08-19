@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'BerlingskeSans-Tn';
+    src: url('BerlingskeSans-Tn.eot');
+    src: url('BerlingskeSans-Tn.eot?#iefix') format('embedded-opentype'),
+        url('BerlingskeSans-Tn.woff2') format('woff2'),
+        url('BerlingskeSans-Tn.woff') format('woff'),
+        url('BerlingskeSans-Tn.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerRegular.eot');
+    src: url('MullerRegular.eot?#iefix') format('embedded-opentype'),
+        url('MullerRegular.woff2') format('woff2'),
+        url('MullerRegular.woff') format('woff'),
+        url('MullerRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
