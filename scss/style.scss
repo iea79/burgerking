@@ -14,12 +14,6 @@
 // @import 'core/buttons';
 @import 'core/video';
 
-.home__left {
-    @media (min-width: 768px) {
-        width: 32.375em;
-    }
-}
-
 .wrapper {
     overflow: hidden;
 }
@@ -27,11 +21,13 @@
 .main_content {}
 
 .home {
-    background: radial-gradient(#ff3134, #4f0708);
     padding: 1em 0;
+    background: #4d0708 url("../img/home-bg.png") center no-repeat;
+    background-size: cover;
+    position: relative;
 
     &__content {
-        max-width: 106em;
+        max-width: 62em;
         margin-left: auto;
         margin-right: auto;
         padding: 0 1em 2em;
@@ -61,7 +57,7 @@
         align-items: center;
         flex-direction: column;
 
-        margin-bottom: 1em;
+        margin-bottom: 2em;
 
         @media (min-width: 768px) {
             flex-direction: row;
@@ -100,23 +96,22 @@
             top: 50%;
             left: 50%;
             border: 0.063em solid #ffd800;
+            transform: translate(-50%,-50%),scale(1);
 
         }
 
         &:before {
             width: 6.56em;
             height: 6.56em;
-            margin-left: -3.28em;
-            margin-top: -3.28em;
             opacity: 0.53;
+            animation: 1s pulse1 infinite;
         }
 
         &:after {
             width: 8.56em;
             height: 8.56em;
-            margin-left: -4.28em;
-            margin-top: -4.28em;
             opacity: 0.18;
+            animation: 1s pulse2 infinite;
         }
 
     }
@@ -130,6 +125,34 @@
 
     }
 
+}
+@keyframes pulse1 {
+    0% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(1.2);
+    }
+}
+@keyframes pulse2 {
+    0% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    60% {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(1.2);
+    }
 }
 
 .section {}
@@ -145,13 +168,15 @@
         margin-bottom: 1em;
         @media (min-width: 768px) {
             font-size: 2em;
-
         }
     }
 
     &__img {
-        width: 32.375em;
+        width: 26em;
         height: 32.688em;
+        @media (min-width: 768px) {
+            width: 32.375em;
+        }
     }
 
 }
@@ -162,7 +187,7 @@
     height: 44em;
     width: 27em;
 
-    margin-top: -6em;
+    margin-top: -11em;
 
     @media (min-width: 768px) {
         margin-top: 0;
