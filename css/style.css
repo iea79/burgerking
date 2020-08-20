@@ -579,13 +579,18 @@ body {
 }
 
 .home {
-  padding: 1em 0;
-  background: #4d0708 url("../img/home-bg.png") center no-repeat;
-  background-size: cover;
-  position: relative;
+  padding: 1.35em 0;
+  background: radial-gradient(#fe3134, #c42325);
+}
+@media (min-width: 768px) {
+  .home {
+    background: #4d0708 url("../img/home-bg.png") center no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 }
 .home__content {
-  max-width: 62em;
+  max-width: 75em;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1em 2em;
@@ -601,6 +606,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
+  letter-spacing: 0.15em;
 }
 @media (min-width: 768px) {
   .home__title {
@@ -610,7 +616,7 @@ body {
 }
 .home__body {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   margin-bottom: 2em;
@@ -705,11 +711,6 @@ body {
   font-weight: 700;
   margin-bottom: 1em;
 }
-@media (min-width: 768px) {
-  .logo__title {
-    font-size: 2em;
-  }
-}
 .logo__img {
   width: 26em;
   height: 32.688em;
@@ -796,4 +797,179 @@ body {
   .burger__item:nth-child(7) {
     bottom: 0;
   }
+}
+
+.section__title {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Lilita One Rus";
+  font-size: 5em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+@media (min-width: 768px) {
+  .section__title {
+    margin-bottom: 0.6em;
+    font-size: 3.875em;
+  }
+}
+
+.task {
+  background: url("../img/task-bg-m.jpg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 5em 0 12em;
+}
+@media (min-width: 768px) {
+  .task {
+    background: url("../img/task-bg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 2em 0 12em;
+  }
+}
+.task__content {
+  max-width: 72em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+  width: 100%;
+}
+.task__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  .task__list {
+    flex-direction: row;
+    margin-bottom: 5em;
+  }
+}
+.task__item {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+.task__item:last-child {
+  margin-right: 0;
+}
+.task__number {
+  color: #ffd800;
+  font-family: "Lilita One Rus";
+  font-size: 7.938em;
+  font-weight: 400;
+}
+.task__desc {
+  width: 17.125em;
+  color: #ffffff;
+  font-size: 1.27em;
+  line-height: 1.397em;
+  margin-left: 1.5em;
+}
+@media (min-width: 768px) {
+  .task__desc {
+    font-size: 1em;
+  }
+}
+.task__composition {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.composition {
+  width: 26.188em;
+  color: #ffffff;
+}
+.composition__title {
+  font-family: "Lilita One Rus";
+  font-size: 5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .composition__title {
+    font-size: 3.313em;
+    text-align: left;
+  }
+}
+.composition__subtitle {
+  line-height: 1.373em;
+  margin-bottom: 6em;
+  font-size: 1.27em;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .composition__subtitle {
+    margin-bottom: 4em;
+    font-size: 1em;
+    text-align: left;
+  }
+}
+.composition__list {
+  display: flex;
+  flex-direction: column;
+}
+.composition__item {
+  margin-bottom: 1em;
+  width: 15em;
+  font-family: "Dinamight RUS - LAT";
+  font-size: 1.313em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  padding: 0.5em;
+  position: relative;
+  transform: skew(150deg);
+  background-color: #d42729;
+  margin-left: 1.5em;
+  margin-bottom: 2em;
+}
+.composition__item:last-child {
+  margin-bottom: 0;
+}
+.composition__item span {
+  display: block;
+  transform: skew(-150deg);
+}
+@media (min-width: 768px) {
+  .composition__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: skew(-150deg);
+  }
+}
+.composition__item:nth-child(1):before {
+  content: "";
+  background: url("../img/task-figure-1.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 18em;
+  height: 9em;
+  top: -5em;
+  right: 17em;
+}
+.composition__item:nth-child(2) {
+  align-self: flex-end;
+}
+.composition__item:nth-child(2):before {
+  content: "";
+  background: url("../img/task-figure-2.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 11em;
+  height: 7em;
+  top: -2.5em;
+  right: 16em;
+}
+.composition__item:nth-child(3):before {
+  content: "";
+  background: url("../img/task-figure-3.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 20em;
+  height: 11em;
+  top: -2.3em;
+  right: 15em;
 }
