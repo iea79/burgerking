@@ -1,10 +1,3 @@
-/*!
- *
- * Evgeniy Ivanov - 2018
- * busforward@gmail.com
- * Skype: ivanov_ea
- *
- */
 @font-face {
   font-family: "BerlingskeSans-Tn";
   font-style: normal;
@@ -799,23 +792,6 @@ body {
   }
 }
 
-.section__title {
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
-  font-family: "Lilita One Rus";
-  font-size: 5em;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 0.3em;
-}
-@media (min-width: 768px) {
-  .section__title {
-    margin-bottom: 0.6em;
-    font-size: 3.875em;
-  }
-}
-
 .task {
   background: url("../img/task-bg-m.jpg") no-repeat;
   background-position: bottom;
@@ -836,6 +812,22 @@ body {
   margin-right: auto;
   padding: 0 1em;
   width: 100%;
+}
+.task__title {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Lilita One Rus";
+  font-size: 5em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+@media (min-width: 768px) {
+  .task__title {
+    margin-bottom: 0.6em;
+    font-size: 3.875em;
+  }
 }
 .task__list {
   display: flex;
@@ -972,4 +964,312 @@ body {
   height: 11em;
   top: -2.3em;
   right: 15em;
+}
+
+.route {
+  padding: 3em 0;
+}
+@media (min-width: 768px) {
+  .route {
+    padding: 8em 0;
+  }
+}
+.route__content {
+  max-width: 74em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+  width: 100%;
+}
+.route__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Lilita One Rus";
+  font-size: 2.2em;
+  line-height: 1.3em;
+  transform: rotate(-4deg);
+  letter-spacing: 0.02em;
+  padding-bottom: 2.3em;
+  position: relative;
+}
+.route__titleTop {
+  width: 12em;
+  margin: auto;
+}
+.route__center {
+  color: #be2224;
+}
+.route__bug {
+  position: absolute;
+  top: 2.65em;
+  left: -2.6em;
+  width: 7em;
+  height: 7em;
+}
+.route__bug img {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .route__title {
+    text-align: center;
+    font-size: 4.25em;
+  }
+  .route__titleTop {
+    width: 100%;
+  }
+  .route__center {
+    display: inline;
+  }
+  .route__titleBottom {
+    display: inline;
+  }
+  .route__bug {
+    width: 2.2em;
+    height: 2.5em;
+    top: -1.9em;
+    left: -0.3em;
+  }
+}
+.route__sity {
+  color: #d42729;
+  font-family: "Lilita One Rus";
+  font-size: 2.6em;
+  position: relative;
+}
+.route__sity:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("../img/rout-location.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+}
+.route__sity_moscow {
+  align-self: flex-end;
+  transform: rotate(-8deg);
+}
+@media (min-width: 768px) {
+  .route__sity_moscow {
+    position: absolute;
+    top: -0.2em;
+    right: -0.8em;
+    align-self: flex-end;
+    margin-right: -0.5em;
+  }
+}
+.route__sity_moscow:before {
+  content: "";
+  top: 0.1em;
+  right: 4em;
+}
+.route__sity_kislovodsk:before {
+  content: "";
+  top: 1em;
+  right: 6.2em;
+}
+@media (min-width: 768px) {
+  .route__sity_kislovodsk:before {
+    content: "";
+    top: 0.1em;
+    left: 5.7em;
+  }
+}
+.route__sityTitle {
+  color: #171717;
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+}
+.route__sitySubtitle {
+  width: 14.5em;
+  color: #171717;
+  line-height: 1.2em;
+}
+
+.moscow {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .moscow {
+    position: relative;
+  }
+}
+.moscow__line {
+  display: none;
+}
+@media (min-width: 768px) {
+  .moscow__line {
+    position: absolute;
+    display: block;
+    background: url("../img/moscow-line.png") 0 0 no-repeat;
+    background-size: contain;
+    top: 2.5em;
+    right: -0.5em;
+    width: 47.75em;
+    height: 47em;
+  }
+}
+.moscow__images {
+  height: 23em;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .moscow__images {
+    height: 17.5em;
+  }
+}
+.moscow__img:nth-child(1) {
+  position: absolute;
+  width: 17em;
+  bottom: 0;
+  left: 1.6em;
+}
+@media (min-width: 768px) {
+  .moscow__img:nth-child(1) {
+    width: 28em;
+    bottom: 0;
+    left: -4em;
+  }
+}
+.moscow__img:nth-child(2) {
+  position: absolute;
+  width: 20em;
+  z-index: -1;
+  bottom: 1.39em;
+  left: 5em;
+}
+@media (min-width: 768px) {
+  .moscow__img:nth-child(2) {
+    width: 30.688em;
+    z-index: -1;
+    bottom: 2.6em;
+    left: 2em;
+  }
+}
+
+.kislovodsk {
+  margin-top: -1em;
+}
+.kislovodsk__inner {
+  width: 14.5em;
+  transform: rotate(5deg);
+  margin-left: 9.5em;
+}
+@media (min-width: 768px) {
+  .kislovodsk__inner {
+    margin-left: 6.5em;
+  }
+}
+.kislovodsk__images {
+  margin-left: -2.5em;
+}
+@media (min-width: 768px) {
+  .kislovodsk__images {
+    position: relative;
+    display: flex;
+    margin-left: -9.5em;
+  }
+}
+.kislovodsk__img {
+  position: relative;
+  width: 33em;
+  height: 33em;
+}
+.kislovodsk__img img {
+  height: 100%;
+}
+.kislovodsk__img span {
+  position: absolute;
+  display: inline-block;
+  color: #898989;
+  font-family: "Gentlemens Script";
+  font-size: 2.5em;
+  line-height: 1.1em;
+}
+@media (min-width: 768px) {
+  .kislovodsk__img span {
+    font-size: 3em;
+  }
+}
+.kislovodsk__img:nth-child(1) span {
+  bottom: -0.2em;
+  left: 3.5em;
+  width: 8em;
+  transform: rotate(-8deg);
+}
+@media (min-width: 768px) {
+  .kislovodsk__img:nth-child(1) {
+    margin-left: 0;
+    margin-top: -2em;
+    width: 38.5em;
+    height: 34.5em;
+  }
+  .kislovodsk__img:nth-child(1) span {
+    bottom: -0.8em;
+    left: 2em;
+    width: 8em;
+    transform: rotate(-10deg);
+  }
+}
+.kislovodsk__img:nth-child(2) span {
+  bottom: -0.5em;
+  left: 1.8em;
+  width: 10em;
+  transform: rotate(4deg);
+}
+@media (min-width: 768px) {
+  .kislovodsk__img:nth-child(2) {
+    margin-left: -19em;
+    margin-top: 4em;
+    width: 33.5em;
+    height: 29.5em;
+  }
+  .kislovodsk__img:nth-child(2) span {
+    bottom: -1em;
+    left: 2.3em;
+    width: 10em;
+    transform: rotate(0deg);
+  }
+}
+.kislovodsk__img:nth-child(3) {
+  transform: rotate(-22deg);
+}
+@media (min-width: 768px) {
+  .kislovodsk__img:nth-child(3) {
+    transform: rotate(0deg);
+    width: 30em;
+    height: 26.7em;
+    margin-top: 8.2em;
+    margin-left: -18em;
+  }
+}
+.kislovodsk__img:nth-child(4) {
+  height: 32em;
+}
+@media (min-width: 768px) {
+  .kislovodsk__img:nth-child(4) {
+    position: absolute;
+    top: -22em;
+    right: -11em;
+    z-index: -1;
+    width: 36em;
+    height: 36em;
+  }
+}
+.kislovodsk__img:nth-child(5) {
+  height: 9.9em;
+  margin-left: 3em;
+}
+@media (min-width: 768px) {
+  .kislovodsk__img:nth-child(5) {
+    position: absolute;
+    transform: rotate(9deg);
+    top: 10em;
+    right: -13em;
+    width: 25.8em;
+    z-index: -1;
+  }
 }

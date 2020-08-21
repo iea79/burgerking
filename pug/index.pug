@@ -34,7 +34,7 @@ block content
     // begin task
     section#task.task.section
         .task__content
-            h2.section__title Задачи:
+            h2.task__title Задачи:
             .task__list
                 .task__item
                     .task__number 1
@@ -66,3 +66,45 @@ block content
 
 
     // end task
+
+    // begin route
+    section#route.route.section
+        .route__content    
+            h2.route__title
+                .route__titleTop Так что собираем чемоданы,
+                .route__center хватаем оборудование
+                .route__titleBottom и в дорогу! 
+
+
+                .route__bug
+                    img(src="img/route-bug.png", alt="alt")
+            .moscow
+                .moscow__images
+                    .moscow__img
+                        img(src="img/moscow1.png", alt="alt")
+                    .moscow__img
+                        img(src="img/moscow2.png", alt="alt")
+                .route__sity.route__sity_moscow Москва
+                .moscow__line
+
+
+            .kislovodsk
+                .kislovodsk__inner
+                    .route__sity.route__sity_kislovodsk Кисловодск
+                    .route__sityTitle ЗАО «Белая Дача»
+                    .route__sitySubtitle Обработка и фасовка овощей (50 000 кг зелени в день)
+                .kislovodsk__images
+                    .kislovodsk__img
+                        img(src="img/kislovodsk1.png", alt="alt")
+                        span Стоимость оборудования более €500 000 
+                    .kislovodsk__img
+                        img(src="img/kislovodsk2.png", alt="alt")
+                        span Антон Семенов - генеральный директор ЗАО “Белая Дача”
+                    .kislovodsk__img
+                        img(src="img/kislovodsk3.png", alt="alt")
+                    .kislovodsk__img
+                        img(src="img/kislovodsk4.png", alt="alt")
+                    .kislovodsk__img
+                        img(src="img/kislovodsk5-m.png", alt="alt")
+
+    // end route
