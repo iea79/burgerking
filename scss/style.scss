@@ -586,6 +586,8 @@
         font-size: 2.6em;
         position: relative;
 
+        margin-bottom: 0.35em;
+
         &:before {
             content: '';
             display: block;
@@ -631,6 +633,40 @@
             }
         }
 
+        &_kaliningrad {
+            &:before {
+                content: '';
+                top: 0.2em;
+                right: 1.3em;
+            }
+            @media (min-width: 768px) {
+                &:before {
+                    content: '';
+                    top: 0.2em;
+                    left: 6.5em;
+                }
+
+            }
+        }
+
+        &_egorievsk {
+            margin-left: 2.3em;
+
+            &:before {
+                content: '';
+                top: 0.8em;
+                right: 0.3em;
+            }
+            @media (min-width: 768px) {
+                &:before {
+                    content: '';
+                    top: 0;
+                    left: 4.6em;
+                }
+
+            }
+        }
+
     }
 
     &__sityTitle {
@@ -644,6 +680,10 @@
         color: #171717;
         // font-size: 0.688em;
         line-height: 1.2em;
+
+        &_kaliningrad {
+            width: 20em;
+        }
     }
 
     // END ROUTE SITI
@@ -722,6 +762,23 @@
 
 .kislovodsk {
     margin-top: -1em;
+    position: relative;
+
+    &__line {
+        display: none;
+        @media (min-width: 768px) {
+            position: absolute;
+            display: block;
+            background: url("../img/kislovodsk-line.png") 0 0 no-repeat;
+            background-size: contain;
+            top: 3.3em;
+            right: 3.9em;
+            width: 66.75em;
+            height: 40em;
+            z-index: -1;
+        }
+
+    }
 
     &__inner {
         width: 14.5em;
@@ -839,7 +896,7 @@
             @media (min-width: 768px) {
                 position: absolute;
                 top: -22em;
-                right: -11em;
+                right: -12em;
                 z-index: -1;
                 width: 36em;
                 height: 36em;
@@ -854,11 +911,330 @@
                 position: absolute;
                 transform: rotate(9deg);
                 top: 10em;
-                right: -13em;
+                right: -10em;
                 width: 25.8em;
                 // height: 26.7em;
                 z-index: -1;
             }
+        }
+
+    }
+
+}
+
+.kaliningrad {
+    position: relative;
+    // margin-top: 1em;
+    &__line {
+        display: none;
+        @media (min-width: 768px) {
+            position: absolute;
+            display: block;
+            background: url("../img/kaliningrad-line.png") 0 0 no-repeat;
+            background-size: contain;
+
+            top: -10.8em;
+            right: 0.5em;
+            width: 55em;
+            height: 55em;
+
+            z-index: -1;
+        }
+
+    }
+
+    &__inner {
+        transform: rotate(-9deg);
+        margin-left: 4em;
+
+        @media (min-width: 768px) {
+            margin-left: 0;
+            transform: rotate(-2deg);
+            position: absolute;
+            top: -14em;
+            right: -3em;
+        }
+    }
+
+    &__images {
+        margin-left: -2.5em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: -16em;
+            position: relative;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 33em;
+        height: 33em;
+
+        img {
+            height: 100%;
+        }
+
+        span {
+            position: absolute;
+            display: inline-block;
+            color: #898989;
+            font-family: "Gentlemens Script";
+            font-size: 3em;
+            line-height: 1.1em;
+
+            // @media (min-width: 768px) {
+            //     font-size: 3em;
+            //
+            // }
+
+        }
+
+        &:nth-child(1) {
+            span {
+                bottom: -0.2em;
+                left: 2.5em;
+                width: 8em;
+                transform: rotate(-8deg);
+            }
+
+            @media (min-width: 768px) {
+                margin-left: 0;
+                margin-top: -2em;
+                width: 35.95em;
+                height: 33.3em;
+
+                span {
+                    bottom: -0.8em;
+                    left: 0;
+                    width: 8em;
+                    transform: rotate(-8deg);
+                }
+            }
+
+        }
+
+        &:nth-child(2) {
+            span {
+                bottom: 0.2em;
+                left: 1.5em;
+                width: 8em;
+                transform: rotate(5deg);
+            }
+
+            @media (min-width: 768px) {
+                margin-left: -16em;
+                margin-top: 9em;
+                width: 23.06em;
+                height: 20.24em;
+                transform: rotate(-8deg);
+
+                span {
+                    bottom: -0.1em;
+                    left: 0.2em;
+                    width: 8em;
+                    transform: rotate(-2deg);
+                }
+            }
+
+        }
+
+        &:nth-child(3) {
+            span {
+                bottom: -0.2em;
+                left: 1.5em;
+                width: 8em;
+                transform: rotate(-8deg);
+                text-align: center;
+            }
+
+            @media (min-width: 768px) {
+                margin-left: -12.5em;
+                margin-top: -1.2em;
+                width: 33.3em;
+                height: 30.6em;
+                transform: rotate(1deg);
+
+                span {
+                    font-size: 2.5em;
+                    bottom: -1.1em;
+                    left: 3.6em;
+                    width: 8em;
+                    transform: rotate(-11deg);
+                }
+            }
+
+        }
+
+        &:nth-child(4) {
+            // border: 1px solid #000;
+            margin-left: 2em;
+            margin-top: 3em;
+            width: 23em;
+            height: 19em;
+
+            @media (min-width: 768px) {
+                position: absolute;
+                bottom: 0;
+                left: -5em;
+            }
+        }
+    }
+
+}
+
+.egorievsk {
+    position: relative;
+    @media (min-width: 768px) {
+        margin-top: 7.5em;
+
+    }
+
+    &__inner {
+        transform: rotate(-9deg);
+        margin-left: 4em;
+
+        @media (min-width: 768px) {
+            margin-left: 0;
+            transform: rotate(-8deg);
+            position: absolute;
+            top: -8em;
+            left: -3.9em;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__images {
+        margin-top: -11em;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            margin-left: -8em;
+            display: flex;
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            height: 100%;
+        }
+
+        &:nth-child(1) {
+            width: 35.9em;
+            height: 33.438em;
+            margin-left: -3.7em;
+            position: relative;
+
+            @media (min-width: 768px) {
+                width: 27.313em;
+                height: 24.438em;
+
+            }
+
+        }
+
+        &:nth-child(2) {
+            width: 36.9em;
+            height: 34.438em;
+
+            margin-left: -4.3em;
+            margin-top: -11em;
+
+            @media (min-width: 768px) {
+                margin-left: -13.5em;
+                margin-top: 0.7em;
+                width: 35.313em;
+                height: 32.438em;
+                transform: rotate(-15deg);
+            }
+
+        }
+
+        &:nth-child(3) {
+            width: 39.9em;
+            height: 35.438em;
+            margin-top: -15.5em;
+            margin-left: -4.2em;
+
+            span {
+                position: absolute;
+                display: inline-block;
+                color: #898989;
+                font-family: "Gentlemens Script";
+                font-size: 2.5em;
+                line-height: 1.1em;
+                bottom: -0.2em;
+                left: 2em;
+                width: 11em;
+                transform: rotate(-11deg);
+                text-align: center;
+            }
+
+            @media (min-width: 768px) {
+                margin-left: -15em;
+                margin-top: -2.4em;
+                width: 34.4em;
+                height: 31.3em;
+                transform: rotate(26deg);
+
+                span {
+                    bottom: 3em;
+                    left: 10em;
+                    transform: rotate(-38deg);
+
+                }
+
+            }
+
+        }
+    }
+
+    &__picture {
+        margin-top: 3em;
+        @media (min-width: 768px) {
+            margin-top: -8em;
+            margin-left: -11.4em;
+            z-index: 1;
+        }
+    }
+
+    &__pictureItem {
+        img {
+            height: 100%;
+        }
+
+        &:nth-child(1) {
+            width: 21.9em;
+            margin-left: -2.3em;
+
+            height: 9em;
+        }
+
+        &:nth-child(2) {
+            width: 26em;
+
+            height: 10.5em;
+
+        }
+
+        &:nth-child(3) {
+            width: 37.2em;
+            margin-top: -5em;
+            margin-left: 4em;
+
+            height: 32em;
+
         }
 
     }
