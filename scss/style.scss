@@ -499,7 +499,7 @@
     padding: 3em 0;
 
     @media (min-width: 768px) {
-        padding: 8em 0;
+        padding: 8em 0 0;
 
     }
 
@@ -1504,3 +1504,168 @@
 }
 
 // end workDay
+
+// begin final
+
+.final {
+    position: relative;
+
+    &__bg {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100em;
+            height: 80em;
+            z-index: -1;
+
+            &-left {
+                background: url("../img/final-bg.png") 0 0 no-repeat;
+                background-size: contain;
+                left: -54em;
+            }
+
+            &-right {
+                background: url("../img/final-bg.png") 0 0 no-repeat;
+                background-size: contain;
+                right: -56em;
+                top: -6em;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 72em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em 1em 3em;
+        width: 100%;
+    }
+
+    &__title {
+        color: #ff2d2f;
+        font-family: "Lilita One Rus";
+        font-size: 3.7em;
+        text-align: center;
+        transform: rotate(-3deg);
+        margin: auto auto 0.4em;
+        width: 7em;
+        line-height: 1em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.2em;
+            width: auto;
+            font-size: 6.563em;
+
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.8em;
+
+        font-weight: 400;
+        line-height: 1.7em;
+        width: 14em;
+        margin: auto;
+        text-align: center;
+
+        margin-bottom: 2em;
+        font-weight: 600;
+
+        @media (min-width: 768px) {
+            font-size: 1.438em;
+            width: 26em;
+            font-weight: 400;
+
+        }
+    }
+
+    &__img {
+        width: 61em;
+        height: 52em;
+        margin-left: -16.5em;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__info {
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+    }
+
+    &__logo {
+        img {
+            height: 100%;
+        }
+        width: 26em;
+        height: 26em;
+        margin-left: 0.5em;
+        margin-bottom: 2.5em;
+
+        @media (min-width: 768px) {
+            width: 22.875em;
+            height: 23.125em;
+            margin-right: 2.5em;
+            margin-bottom: 0;
+
+        }
+    }
+
+    &__desk {
+        width: 27em;
+        @media (min-width: 768px) {
+            width: 29em;
+        }
+    }
+
+    &__deskTitle {
+        font-family: "Lilita One Rus";
+        font-size: 2.4em;
+        margin-bottom: 0.2em;
+
+        @media (min-width: 768px) {
+            font-size: 2.75em;
+        }
+    }
+
+    &__deskSubtitle {
+        font-family: "Muller Light Italic";
+        font-style: italic;
+        font-size: 1.6em;
+        margin-bottom: 1em;
+        line-height: 1.3em;
+
+        @media (min-width: 768px) {
+            font-size: 1.313em;
+            margin-bottom: 1.8em;
+            line-height: inherit;
+        }
+    }
+
+    &__text {
+        font-family: "Muller Regular";
+        line-height: 1.5em;
+        font-size: 1.5em;
+
+        p {
+            margin: 0 0 1.4em;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 1.1em;
+        }
+    }
+
+}
+
+// end final
