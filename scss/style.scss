@@ -1242,3 +1242,265 @@
 }
 
 // end route
+
+// begin workDay
+
+.workDay {
+    background: #070302;
+    color: #ffffff;
+    position: relative;
+
+    @media (min-width: 768px) {
+        background: #070302 url("../img/workDay-bg.png") center no-repeat;
+        background-size: cover;
+    }
+
+    &__bg {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            // background-position: 0;
+            // background-repeat: no-repeat;
+
+        }
+
+        &-left {
+            left: 0;
+            background: url("../img/workDay__leftBG.png") 0 0 no-repeat;
+            background-size: contain;
+            width: 22em;
+            height: 31em;
+        }
+
+        &-right {
+            right: 0;
+            background: url("../img/workDay__rightBG.png") 0 0 no-repeat;
+            background-size: contain;
+            width: 32em;
+            height: 30em;
+        }
+    }
+
+    &__content {
+        max-width: 88em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 1em;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            padding: 0 1em 8.5em;
+        }
+    }
+
+    &__top {
+        text-align: center;
+        position: relative;
+
+        @media (min-width: 768px) {
+            width: 63em;
+            display: flex;
+            margin: auto;
+            padding: 2em 0;
+        }
+    }
+
+    &__left {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            top: 2.8em;
+            left: -8em;
+            width: 11em;
+        }
+    }
+
+    &__center {
+        padding: 1em 0;
+
+        @media (min-width: 768px) {
+            // padding: 0 2em;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-family: "Lilita One Rus";
+        font-size: 3em;
+        line-height: 1.4em;
+        margin-bottom: 0.5em;
+
+        @media (min-width: 768px) {
+            font-size: 3.6em;
+            line-height: 1.3em;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.25em;
+
+        }
+    }
+
+    &__subtitle {
+        opacity: 0.7;
+        font-size: 1.3em;
+        font-weight: 400;
+        line-height: 1.7em;
+        letter-spacing: 0.06em;
+
+        @media (min-width: 768px) {
+            letter-spacing: 0;
+            padding: 0 5em;
+
+        }
+    }
+
+    &__right {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            top: 3.9em;
+            right: -6.5em;
+            width: 14em;
+        }
+    }
+
+    &__bottom {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            height: 100%;
+        }
+
+        span {
+            position: absolute;
+            opacity: 0.7;
+            font-size: 1.6em;
+            font-weight: 400;
+
+            @media (min-width: 768px) {
+                font-size: 1.3em;
+            }
+
+        }
+
+        &:nth-child(1) {
+            width: 31.375em;
+            height: 28.25em;
+            margin-left: -1.4em;
+
+            span {
+                left: 4.9em;
+                bottom: 1.2em;
+            }
+            @media (min-width: 768px) {
+                width: 23.68em;
+                height: 20.43em;
+                margin-left: 6em;
+                transform: rotate(-8deg);
+
+                span {
+                    bottom: -3em;
+                    left: 0;
+                    transform: rotate(7deg);
+                }
+
+            }
+
+        }
+
+        &:nth-child(2) {
+            width: 34em;
+            height: 31em;
+            margin-left: -2.5em;
+            margin-bottom: 3em;
+
+            span {
+                font-family: "Gentlemens Script";
+                font-size: 2.4em;
+                text-align: center;
+                letter-spacing: 0.06em;
+                line-height: 1.15em;
+                display: inline-block;
+                transform: rotate(-4deg);
+                width: 10em;
+                opacity: 1;
+                left: 1.5em;
+                bottom: -1.7em;
+            }
+
+            @media (min-width: 768px) {
+                width: 28.19em;
+                height: 24.75em;
+                margin-left: -10.5em;
+                margin-bottom: 0;
+                margin-top: 1.7em;
+                transform: rotate(-9deg);
+
+                span {
+                    width: 11.4em;
+                    transform: rotate(2deg);
+                    font-size: 2.563em;
+                    left: 0.4em;
+                    bottom: -2.4em;
+                }
+            }
+
+        }
+
+        &:nth-child(3) {
+            width: 31.375em;
+            height: 28.25em;
+            margin-left: -1.4em;
+
+            @media (min-width: 768px) {
+                width: 24.79em;
+                height: 21.4em;
+                margin-left: -9.7em;
+                margin-top: 2.2em;
+                transform: rotate(16deg);
+            }
+
+        }
+
+        &:nth-child(4) {
+            width: 36em;
+            height: 33em;
+            margin-left: -4em;
+            margin-top: -10em;
+
+            span {
+                left: 6.2em;
+                bottom: 1.7em;
+            }
+
+            @media (min-width: 768px) {
+                width: 29.14em;
+                height: 24.3em;
+                margin-left: -9.7em;
+                margin-top: 0.6em;
+                transform: rotate(-8deg);
+
+                span {
+                    left: 3.5em;
+                    bottom: 0;
+                    transform: rotate(8deg);
+                }
+            }
+
+        }
+    }
+}
+
+// end workDay
