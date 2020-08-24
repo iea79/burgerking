@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="home__playVideo">
-              <div class="home__play"><img src="img/home/play.svg" alt="alt"/></div>
+              <div class="home__play"><img src="img/home/play.svg" alt="alt" data-toggle="modal" data-target="#previwe"/></div>
               <div class="home__videoShow">Посмотри наш трейлер.</div>
             </div>
           </div>
@@ -187,10 +187,21 @@
           <div class="final__bg final__bg-right parallaxMouse" data-speed="-0.4"></div>
         </section>
         <!-- end final-->
+        <!-- Begin Modal previwe-->
+        <div class="modal fade play" id="previwe"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-dialog">
+            <div class="video__wrapper">
+              <div id="short-video"></div>
+            </div>
+          </div>
+        </div>
+        <!-- End modal previwe-->
       </main>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/player.js"></script>
     <script src="js/function.js"></script>
   </body>
 </html>

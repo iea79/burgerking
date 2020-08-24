@@ -1,4 +1,5 @@
 // Modal / bootstrap ------------------------------------------
+
 .modal {
     display: none;
     overflow: auto;
@@ -11,59 +12,82 @@
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+
     &-open {
         overflow: hidden;
     }
+
     &-close {
         position: absolute;
-        width: 21px;
-        height: 21px;
-        right: 23px;
-        top: 23px;
+        width: 4em;
+        height: 4em;
+        right: 3em;
+        top: 3em;
         // background: image-url('close.svg') no-repeat center center;
-        &:before,&:after {
+        &:after,
+        &:before {
             content: '';
             position: absolute;
             display: block;
-            width: 20px;
-            border-top: 1px solid $main_color;
-            top: 10px;
+            width: 100%;
+            border-top: 0.2em solid $main_color;
+            top: 50%;
+            margin-top: -.1em;
         }
+
         &:before {
             transform: rotate(45deg);
         }
+
         &:after {
             transform: rotate(-45deg);
         }
+
         &:hover {
-            opacity: .8;
+            opacity: 0.8;
         }
     }
+
     &.fade .modal-dialog {
-        transform: translate(0, -25%);
-        transition: transform 0.3s ease-out;
+        opacity: 0;
+        transform: translate(0, 25%);
+        transition: opacity 0.7s ease-out, transform 0.5s ease-out;
     }
-    &.in .modal-dialog {
-        transform: translate(0, 0);
-        position: relative;
+
+    &.in {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+        .modal-dialog {
+            opacity: 1;
+            transform: translate(0, 0);
+            position: relative;
+        }
     }
+
     &-dialog {
         position: relative;
         width: auto;
-        margin: 10px auto;
-        max-width: 690px;
+        margin: 1em auto;
+        max-width: 100%;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            max-width: 81.625em;
+        }
     }
 
     &-content {
         position: relative;
-        background-color: #fff;
-        border: 1px solid #999;
-        border: 1px solid rgba(0,0,0,.2);
-        border-radius: 6px;
-        box-shadow: 0 3px 9px rgba(0,0,0,.5);
+        // background-color: #fff;
+        // border: 1px solid #999;
+        // border: 1px solid rgba(0,0,0,.2);
+        // border-radius: 6px;
+        // box-shadow: 0 3px 9px rgba(0,0,0,.5);
         background-clip: padding-box;
-        outline: 0;
-        padding: 46px 53px;
+        // outline: 0;
+        // padding: 46px 53px;
     }
 
     &-backdrop {
@@ -74,57 +98,58 @@
         left: 0;
         z-index: 1040;
         background-color: #000;
+        transition: 1s;
+
         &.fade {
             opacity: 0;
             filter: alpha(opacity=0);
         }
 
         &.in {
-            opacity: .5;
-            filter: alpha(opacity=50);
+            opacity: 0.95;
+            filter: alpha(opacity=95);
         }
     }
 
-    &-header {
-        padding: 15px 0;
-        min-height: 16.42857143px;
-        color: #666;
-        font-size: 18px;
-        .close {
-            margin-top: -2px;
-        }
-    }
-
-    &-title {
-        margin: 0;
-        line-height: 1.42857143;
-    }
+    // &-header {
+    //     padding: 15px 0;
+    //     min-height: 16.42857143px;
+    //     color: #666;
+    //     font-size: 18px;
+    //
+    //     .close {
+    //         margin-top: -2px;
+    //     }
+    // }
+    //
+    // &-title {
+    //     margin: 0;
+    //     line-height: 1.42857143;
+    // }
 
     &-body {
         position: relative;
         padding: 0;
     }
 
-    &-footer {
-        margin-top: 15px;
-        padding: 19px 20px 20px;
-        text-align: right;
-        border-top: 1px solid #e5e5e5;
-        .btn+.btn {
-            margin-left: 5px;
-            margin-bottom: 0;
-        }
-
-        .btn-group .btn+.btn {
-            margin-left: -1px;
-        }
-
-        .btn-block+.btn-block {
-            margin-left: 0;
-        }
-    }
+    // &-footer {
+    //     margin-top: 15px;
+    //     padding: 19px 20px 20px;
+    //     text-align: right;
+    //     border-top: 1px solid #e5e5e5;
+    //
+    //     .btn+.btn {
+    //         margin-left: 5px;
+    //         margin-bottom: 0;
+    //     }
+    //
+    //     .btn-group .btn+.btn {
+    //         margin-left: -1px;
+    //     }
+    //
+    //     .btn-block+.btn-block {
+    //         margin-left: 0;
+    //     }
+    // }
 
 }
-
-
-
