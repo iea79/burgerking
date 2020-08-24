@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css?0.1"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.2"/>
   </head>
   <body>
     <div class="wrapper">
       <main class="main_content">
         <!-- begin home-->
-        <section class="home section" id="home">
+        <section class="home section parallaxBox" id="home">
           <div class="home__content">
             <h2 class="home__title">ДОКУМЕНТАЛЬНЫЙ ФИЛЬМ</h2>
             <div class="home__body">
@@ -20,13 +20,13 @@
                 <div class="logo__img"><img src="img/home/burger-king-clip-art.png" alt="alt"/></div>
               </div>
               <div class="burger">
-                <div class="burger__item"><img src="img/home/burger/item-1.png" alt="alt"/></div>
-                <div class="burger__item"><img src="img/home/burger/item-2.png" alt="alt"/></div>
-                <div class="burger__item"><img src="img/home/burger/item-3.png" alt="alt"/></div>
-                <div class="burger__item"><img src="img/home/burger/item-4.png" alt="alt"/></div>
-                <div class="burger__item"><img src="img/home/burger/item-5.png" alt="alt"/></div>
-                <div class="burger__item"><img src="img/home/burger/item-6.png" alt="alt"/></div>
-                <div class="burger__item"><img src="img/home/burger/item-7.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="1"><img src="img/home/burger/item-1.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="0.7"><img src="img/home/burger/item-2.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="0.5"><img src="img/home/burger/item-3.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="0.3"><img src="img/home/burger/item-4.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="0.5"><img src="img/home/burger/item-5.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="0.7"><img src="img/home/burger/item-6.png" alt="alt"/></div>
+                <div class="burger__item parallaxMouse" data-speed="1"><img src="img/home/burger/item-7.png" alt="alt"/></div>
               </div>
             </div>
             <div class="home__playVideo">
@@ -69,18 +69,18 @@
         </section>
         <!-- end task-->
         <!-- begin route-->
-        <section class="route section" id="route">
+        <section class="route section parallaxBox" id="route">
           <div class="route__content">   
             <h2 class="route__title">
               <div class="route__titleTop">Так что собираем чемоданы,</div>
               <div class="route__center">хватаем оборудование</div>
               <div class="route__titleBottom">и в дорогу! </div>
-              <div class="route__bug"><img src="img/route-bug.png" alt="alt"/></div>
+              <div class="route__bug parallaxMouse" data-speed="-0.1"><img src="img/route-bug.png" alt="alt"/></div>
             </h2>
             <div class="moscow">
               <div class="moscow__images">
-                <div class="moscow__img"><img src="img/moscow1.png" alt="alt"/></div>
-                <div class="moscow__img"><img src="img/moscow2.png" alt="alt"/></div>
+                <div class="moscow__img parallaxMouse" data-speed="0.5"><img src="img/moscow1.png" alt="alt"/></div>
+                <div class="moscow__img parallaxMouse" data-speed="1"><img src="img/moscow2.png" alt="alt"/></div>
               </div>
               <div class="route__sity route__sity_moscow">Москва</div>
               <div class="moscow__line"></div>
@@ -92,11 +92,11 @@
                 <div class="route__sitySubtitle">Обработка и фасовка овощей (50 000 кг зелени в день)</div>
               </div>
               <div class="kislovodsk__images">
-                <div class="kislovodsk__img"><img src="img/kislovodsk1.png" alt="alt"/><span>Стоимость оборудования более €500 000 </span></div>
-                <div class="kislovodsk__img"><img src="img/kislovodsk2.png" alt="alt"/><span>Антон Семенов - генеральный директор ЗАО “Белая Дача”</span></div>
-                <div class="kislovodsk__img"><img src="img/kislovodsk3.png" alt="alt"/></div>
-                <div class="kislovodsk__img"><img src="img/kislovodsk4.png" alt="alt"/></div>
-                <div class="kislovodsk__img"><img src="img/kislovodsk5-m.png" alt="alt"/></div>
+                <div class="kislovodsk__img"><img class="wow" src="img/kislovodsk1.png" alt="alt"/><span>Стоимость оборудования более €500 000 </span></div>
+                <div class="kislovodsk__img"><img class="wow" src="img/kislovodsk2.png" alt="alt"/><span>Антон Семенов - генеральный директор ЗАО “Белая Дача”</span></div>
+                <div class="kislovodsk__img"><img class="wow" src="img/kislovodsk3.png" alt="alt"/></div>
+                <div class="kislovodsk__img"><img class="wow" src="img/kislovodsk4.png" alt="alt"/></div>
+                <div class="kislovodsk__img"><img class="wow" src="img/kislovodsk5-m.png" alt="alt"/></div>
               </div>
               <div class="kislovodsk__line"></div>
             </div>
@@ -107,10 +107,10 @@
                 <div class="route__sitySubtitle route__sitySubtitle_kaliningrad">Производство котлет из говядины и свинины (300 000 котлет в день)</div>
               </div>
               <div class="kaliningrad__images">
-                <div class="kaliningrad__img"><img src="img/kaliningrad1.png" alt="alt"/><span>Не переживайте, эту котлету мы выкинули</span></div>
-                <div class="kaliningrad__img"><img src="img/kaliningrad2.png" alt="alt"/><span>50 000 котлет в день</span></div>
-                <div class="kaliningrad__img"><img src="img/kaliningrad3.png" alt="alt"/><span>Денис Смирнов - директор по производству</span></div>
-                <div class="kaliningrad__img"><img src="img/kaliningrad4.png" alt="alt"/></div>
+                <div class="kaliningrad__img"><img class="wow" src="img/kaliningrad1.png" alt="alt"/><span>Не переживайте, эту котлету мы выкинули</span></div>
+                <div class="kaliningrad__img"><img class="wow" src="img/kaliningrad2.png" alt="alt"/><span>50 000 котлет в день</span></div>
+                <div class="kaliningrad__img"><img class="wow" src="img/kaliningrad3.png" alt="alt"/><span>Денис Смирнов - директор по производству</span></div>
+                <div class="kaliningrad__img"><img class="wow" src="img/kaliningrad4.png" alt="alt"/></div>
               </div>
               <div class="kaliningrad__line"></div>
             </div>
@@ -122,14 +122,14 @@
               </div>
               <div class="egorievsk__content">
                 <div class="egorievsk__images">
-                  <div class="egorievsk__img"><img src="img/egorievsk1.png" alt="alt"/></div>
-                  <div class="egorievsk__img"><img src="img/egorievsk2.png" alt="alt"/></div>
-                  <div class="egorievsk__img"><img src="img/egorievsk3.png" alt="alt"/><span>Любой внешний деффект на булочке считается браком</span></div>
+                  <div class="egorievsk__img"><img class="wow" src="img/egorievsk1.png" alt="alt"/></div>
+                  <div class="egorievsk__img"><img class="wow" src="img/egorievsk2.png" alt="alt"/></div>
+                  <div class="egorievsk__img"><img class="wow" src="img/egorievsk3.png" alt="alt"/><span>Любой внешний деффект на булочке считается браком</span></div>
                 </div>
                 <div class="egorievsk__picture">
-                  <div class="egorievsk__pictureItem"><img src="img/pic1.png" alt="alt"/></div>
-                  <div class="egorievsk__pictureItem"><img src="img/pic2.png" alt="alt"/></div>
-                  <div class="egorievsk__pictureItem"><img src="img/pic3.png" alt="alt"/></div>
+                  <div class="egorievsk__pictureItem parallaxMouse" data-speed="0.6"><img src="img/pic1.png" alt="alt"/></div>
+                  <div class="egorievsk__pictureItem parallaxMouse" data-speed="0.8"><img src="img/pic2.png" alt="alt"/></div>
+                  <div class="egorievsk__pictureItem parallaxMouse" data-speed="1"><img src="img/pic3.png" alt="alt"/></div>
                 </div>
               </div>
             </div>
@@ -148,18 +148,18 @@
               <div class="workDay__right"><img src="img/face2.png" alt="alt"/></div>
             </div>
             <div class="workDay__bottom">
-              <div class="workDay__img"><img src="img/workDay1.png" alt="alt"/><span>От посудомойщика</span></div>
-              <div class="workDay__img"><img src="img/workDay2.png" alt="alt"/><span>Раздаем листовки с генеральным директором Burger King в России</span></div>
-              <div class="workDay__img"><img src="img/workDay3.png" alt="alt"/></div>
-              <div class="workDay__img"><img src="img/workDay4.png" alt="alt"/><span>До главного по кассе</span></div>
+              <div class="workDay__img"><img class="wow" src="img/workDay1.png" alt="alt"/><span>От посудомойщика</span></div>
+              <div class="workDay__img"><img class="wow" src="img/workDay2.png" alt="alt"/><span>Раздаем листовки с генеральным директором Burger King в России</span></div>
+              <div class="workDay__img"><img class="wow" src="img/workDay3.png" alt="alt"/></div>
+              <div class="workDay__img"><img class="wow" src="img/workDay4.png" alt="alt"/><span>До главного по кассе</span></div>
             </div>
           </div>
-          <div class="workDay__bg workDay__bg-left"></div>
-          <div class="workDay__bg workDay__bg-right"></div>
+          <div class="workDay__bg workDay__bg-left wow2"></div>
+          <div class="workDay__bg workDay__bg-right wow2"></div>
         </section>
         <!-- end workDay-->
         <!-- begin final-->
-        <section class="final section" id="final">
+        <section class="final section parallaxBox" id="final">
           <div class="final__content">
             <div class="final__title">Финальный этап</div>
             <div class="final__subtitle">Соединяем все сюжеты в динамичную историю, добавляем архивные материалы и закадровый голос</div>
@@ -183,13 +183,14 @@
               </div>
             </div>
           </div>
-          <div class="final__bg final__bg-left"></div>
-          <div class="final__bg final__bg-right"></div>
+          <div class="final__bg final__bg-left parallaxMouse" data-speed="0.4"></div>
+          <div class="final__bg final__bg-right parallaxMouse" data-speed="-0.4"></div>
         </section>
         <!-- end final-->
       </main>
     </div>
     <script src="js/jquery.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/function.js"></script>
   </body>
 </html>

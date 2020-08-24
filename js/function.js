@@ -41,10 +41,80 @@ $(document).ready(function() {
 
     // checkOnResize();
 
+    mouseMoveParallax();
+
+    let wowOffset = $(window).height() / 4;
+
+    let wow = new WOW({
+        boxClass:     'wow',
+        animateClass: 'slideUp', // animation css class (default is animated)
+        offset:       wowOffset,          // distance to the element when triggering the animation (default is 0)
+    });
+    wow.init();
+
+
+    let wow2 = new WOW({
+        boxClass:     'wow2',      // animated element css class (default is wow)
+        animateClass: 'bounceUp', // animation css class (default is animated)
+        offset:       wowOffset,          // distance to the element when triggering the animation (default is 0)
+    });
+    wow2.init();
 });
 
+
+function parallax() {
+    if (isXsWidth()) return false;
+    let item = $('.parallaxItem');
+    var el = document.querySelector('body');
+    app.pageFs = window.getComputedStyle(el, null).getPropertyValue('font-size').replace('px', '')*1;
+    let top = $(window).scrollTop()/app.pageFs;
+    let speed;
+
+    // console.log(app.pageFs);
+    item.each(function(index, el) {
+        top = $(window).scrollTop()/app.pageFs;
+        speed = $(this).data('speed');
+        $(el).attr('style', 'transform: translateY(-'+(top*speed/10)+'em)');
+    });
+}
+
+function mouseMoveParallax() {
+    let wrapper = $('.parallaxBox');
+    let item = wrapper.find('.parallaxMouse');
+    let speed = 0;
+    let offsetX;
+    let offsetY;
+
+    if (isXsWidth()) return false;
+
+    wrapper.on('mousemove', function(even) {
+        // console.log(even.screenX);
+        // console.log(even.clientX - $(window).width() / 2);
+        offsetX = -(even.clientX - $(window).width() / 2);
+        offsetY = -(even.clientY - $(window).width() / 2);
+
+        if (isXsWidth()) {
+            item.removeAttr('style');
+        } else {
+            item.each(function(index, el) {
+                speed = $(el).data('speed');
+                $(el).attr('style', 'transform: translate3d('+(offsetX*speed/1000)+'em, '+(offsetY*speed/1000)+'em , 0)');
+            });
+        }
+
+    });
+
+    wrapper.on('mouseleave', function(even) {
+        item.each(function(index, el) {
+            speed = $(el).data('speed');
+            $(el).attr('style', 'transform: translate3d(0, 0 , 0)');
+        });
+    });
+}
+
+
 $(window).resize(function(event) {
-    var windowWidth = $(window).width();
+    let windowWidth = $(window).width();
     // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
     if (app.resized == windowWidth) { return; }
     app.resized = windowWidth;

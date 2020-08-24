@@ -2,7 +2,7 @@ extends layout/layout.pug
 
 block content
     // begin home
-    section#home.home.section
+    section#home.home.section.parallaxBox
         .home__content
             h2.home__title ДОКУМЕНТАЛЬНЫЙ ФИЛЬМ
             .home__body
@@ -11,19 +11,19 @@ block content
                     .logo__img
                         img(src="img/home/burger-king-clip-art.png", alt="alt")
                 .burger
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="1")
                         img(src="img/home/burger/item-1.png", alt="alt")
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="0.7")
                         img(src="img/home/burger/item-2.png", alt="alt")
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="0.5")
                         img(src="img/home/burger/item-3.png", alt="alt")
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="0.3")
                         img(src="img/home/burger/item-4.png", alt="alt")
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="0.5")
                         img(src="img/home/burger/item-5.png", alt="alt")
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="0.7")
                         img(src="img/home/burger/item-6.png", alt="alt")
-                    .burger__item
+                    .burger__item.parallaxMouse(data-speed="1")
                         img(src="img/home/burger/item-7.png", alt="alt")
             .home__playVideo
                 .home__play
@@ -60,7 +60,7 @@ block content
     // end task
 
     // begin route
-    section#route.route.section
+    section#route.route.section.parallaxBox
         .route__content    
             h2.route__title
                 .route__titleTop Так что собираем чемоданы,
@@ -68,13 +68,13 @@ block content
                 .route__titleBottom и в дорогу! 
 
 
-                .route__bug
+                .route__bug.parallaxMouse(data-speed="-0.1")
                     img(src="img/route-bug.png", alt="alt")
             .moscow
                 .moscow__images
-                    .moscow__img
+                    .moscow__img.parallaxMouse(data-speed="0.5")
                         img(src="img/moscow1.png", alt="alt")
-                    .moscow__img
+                    .moscow__img.parallaxMouse(data-speed="1")
                         img(src="img/moscow2.png", alt="alt")
                 .route__sity.route__sity_moscow Москва
                 .moscow__line
@@ -87,17 +87,17 @@ block content
                     .route__sitySubtitle Обработка и фасовка овощей (50 000 кг зелени в день)
                 .kislovodsk__images
                     .kislovodsk__img
-                        img(src="img/kislovodsk1.png", alt="alt")
+                        img.wow(src="img/kislovodsk1.png", alt="alt")
                         span Стоимость оборудования более €500 000 
                     .kislovodsk__img
-                        img(src="img/kislovodsk2.png", alt="alt")
+                        img.wow(src="img/kislovodsk2.png", alt="alt")
                         span Антон Семенов - генеральный директор ЗАО “Белая Дача”
                     .kislovodsk__img
-                        img(src="img/kislovodsk3.png", alt="alt")
+                        img.wow(src="img/kislovodsk3.png", alt="alt")
                     .kislovodsk__img
-                        img(src="img/kislovodsk4.png", alt="alt")
+                        img.wow(src="img/kislovodsk4.png", alt="alt")
                     .kislovodsk__img
-                        img(src="img/kislovodsk5-m.png", alt="alt")
+                        img.wow(src="img/kislovodsk5-m.png", alt="alt")
                 .kislovodsk__line
             .kaliningrad
                 .kaliningrad__inner
@@ -106,16 +106,16 @@ block content
                     .route__sitySubtitle.route__sitySubtitle_kaliningrad Производство котлет из говядины и свинины (300 000 котлет в день)
                 .kaliningrad__images
                     .kaliningrad__img
-                        img(src="img/kaliningrad1.png", alt="alt")
+                        img.wow(src="img/kaliningrad1.png", alt="alt")
                         span Не переживайте, эту котлету мы выкинули
                     .kaliningrad__img
-                        img(src="img/kaliningrad2.png", alt="alt")
+                        img.wow(src="img/kaliningrad2.png", alt="alt")
                         span 50 000 котлет в день
                     .kaliningrad__img
-                        img(src="img/kaliningrad3.png", alt="alt")
+                        img.wow(src="img/kaliningrad3.png", alt="alt")
                         span Денис Смирнов - директор по производству
                     .kaliningrad__img
-                        img(src="img/kaliningrad4.png", alt="alt")
+                        img.wow(src="img/kaliningrad4.png", alt="alt")
                 .kaliningrad__line
             .egorievsk
                 .egorievsk__inner
@@ -125,18 +125,18 @@ block content
                 .egorievsk__content
                     .egorievsk__images
                         .egorievsk__img
-                            img(src="img/egorievsk1.png", alt="alt")
+                            img.wow(src="img/egorievsk1.png", alt="alt")
                         .egorievsk__img
-                            img(src="img/egorievsk2.png", alt="alt")
+                            img.wow(src="img/egorievsk2.png", alt="alt")
                         .egorievsk__img
-                            img(src="img/egorievsk3.png", alt="alt")
+                            img.wow(src="img/egorievsk3.png", alt="alt")
                             span Любой внешний деффект на булочке считается браком
                     .egorievsk__picture
-                        .egorievsk__pictureItem
+                        .egorievsk__pictureItem.parallaxMouse(data-speed="0.6")
                             img(src="img/pic1.png", alt="alt")
-                        .egorievsk__pictureItem
+                        .egorievsk__pictureItem.parallaxMouse(data-speed="0.8")
                             img(src="img/pic2.png", alt="alt")
-                        .egorievsk__pictureItem
+                        .egorievsk__pictureItem.parallaxMouse(data-speed="1")
                             img(src="img/pic3.png", alt="alt")
 
 
@@ -156,25 +156,25 @@ block content
 
             .workDay__bottom
                 .workDay__img
-                    img(src="img/workDay1.png", alt="alt")
+                    img.wow(src="img/workDay1.png", alt="alt")
                     span От посудомойщика
                 .workDay__img
-                    img(src="img/workDay2.png", alt="alt")
+                    img.wow(src="img/workDay2.png", alt="alt")
                     span Раздаем листовки с генеральным директором Burger King в России
                 .workDay__img
-                    img(src="img/workDay3.png", alt="alt")
+                    img.wow(src="img/workDay3.png", alt="alt")
                 .workDay__img
-                    img(src="img/workDay4.png", alt="alt")
+                    img.wow(src="img/workDay4.png", alt="alt")
                     span До главного по кассе
 
-        .workDay__bg.workDay__bg-left
-        .workDay__bg.workDay__bg-right
+        .workDay__bg.workDay__bg-left.wow2
+        .workDay__bg.workDay__bg-right.wow2
 
 
     // end workDay
 
     // begin final
-    section#final.final.section
+    section#final.final.section.parallaxBox
         .final__content
             .final__title Финальный этап
             .final__subtitle Соединяем все сюжеты в динамичную историю, добавляем архивные материалы и закадровый голос
@@ -199,7 +199,7 @@ block content
                         p ue erat nunc et nisi. Proin viverra efficitur eros. Pellentesque volutpatfinibus libero, a lacinia metus lobortis eget. Vestibulum at odio ex.
                         p Duis auctor gravida ultricies. Etiam vestibulum cursus enim a lacinia.
 
-        .final__bg.final__bg-left
-        .final__bg.final__bg-right
+        .final__bg.final__bg-left.parallaxMouse(data-speed="0.4")
+        .final__bg.final__bg-right.parallaxMouse(data-speed="-0.4")
 
     // end final

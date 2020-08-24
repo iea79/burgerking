@@ -494,7 +494,6 @@
 // end task
 
 // begin route
-
 .route {
     padding: 3em 0;
 
@@ -811,6 +810,7 @@
 
         img {
             height: 100%;
+            display: block;
         }
 
         span {
@@ -974,6 +974,7 @@
 
         img {
             height: 100%;
+            display: block;
         }
 
         span {
@@ -1128,6 +1129,7 @@
 
         img {
             height: 100%;
+            display: block;
         }
 
         &:nth-child(1) {
@@ -1211,29 +1213,44 @@
 
     &__pictureItem {
         img {
-            height: 100%;
+            // height: 100%;
+            width: 100%;
         }
 
         &:nth-child(1) {
-            width: 21.9em;
-            margin-left: -2.3em;
+            width: 14.6em;
+            margin-left: 0.2em;
 
-            height: 9em;
+            @media (min-width: 768px) {
+                top: -7.3em;
+            }
+
+            // height: 9em;
         }
 
         &:nth-child(2) {
-            width: 26em;
+            width: 21em;
+            margin-left: 1.5em;
 
-            height: 10.5em;
+            @media (min-width: 768px) {
+                top: 0.1em;
+
+            }
+
+            // height: 10.5em;
 
         }
 
         &:nth-child(3) {
-            width: 37.2em;
+            width: 26.2em;
             margin-top: -5em;
-            margin-left: 4em;
+            margin-left: 4.9em;
 
-            height: 32em;
+            @media (min-width: 768px) {
+                top: 10.3em;
+            }
+
+            // height: 32em;
 
         }
 
@@ -1249,6 +1266,7 @@
     background: #070302;
     color: #ffffff;
     position: relative;
+    overflow: hidden;
 
     @media (min-width: 768px) {
         background: #070302 url("../img/workDay-bg.png") center no-repeat;
@@ -1263,6 +1281,10 @@
             bottom: 0;
             // background-position: 0;
             // background-repeat: no-repeat;
+
+            &[style*="visibility: visible"] {
+                animation: bounceUp 1s;
+            }
 
         }
 
@@ -1669,3 +1691,100 @@
 }
 
 // end final
+
+.slideUp {
+    animation: slideUp 2s;
+}
+
+@keyframes slideUp {
+    0% {
+        position: relative;
+        opacity: 0;
+        transform: translateY(1.6em);
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    50% {
+        // opacity: 1;
+    }
+
+    100% {
+        // opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bounceUp {
+    animation: bounceUp 1s;
+}
+
+@keyframes bounceUp {
+    60%,
+    75%,
+    90%,
+    from,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 187.5em, 0);
+        transform: translate3d(0, 187.5em, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -1.4em, 0);
+        transform: translate3d(0, -1.4em, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, .66em, 0);
+        transform: translate3d(0, .66em, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -.35em, 0);
+        transform: translate3d(0, -.35em, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.wow {
+    display: block;
+
+    &[style*="visibility: visible"] {
+        animation: slideUp 1.5s;
+    }
+}
+
+.parallax {
+    &Box {
+        position: relative;
+    }
+
+    &Item,
+    &Mouse {
+
+        @media (min-width: 768px) {
+            perspective: 200em;
+            transform-style: preserve-3d;
+            transition: transform 0.1s linear;
+            // position: absolute;
+            // z-index: 15;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}
