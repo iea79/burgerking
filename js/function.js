@@ -246,7 +246,7 @@ checkDirectionScroll();
 
 
 var preview = {
-    id: 427324579,
+    id: 427323376,
 };
 
 var player1 = new Vimeo.Player('short-video', preview);
@@ -258,3 +258,93 @@ $('#previwe').on('show.bs.modal', function() {
 $('#previwe').on('hide.bs.modal', function() {
     player1.pause();
 });
+
+// var fullVideo = {
+//     id: 445510302,
+// };
+//
+// var player2 = new Vimeo.Player('video', fullVideo);
+//
+// $('#play').on('show.bs.modal', function() {
+//     player2.play();
+// });
+//
+// $('#play').on('hide.bs.modal', function() {
+//     player2.pause();
+// });
+
+function playVideo(box) {
+    let section = $(box),
+        fullscr = $('.rezultat__full'),
+        preview = {
+            id: 451083510,
+            // loop: false,
+            volume: 0,
+            // controls: true,
+            // autoplay: false,
+            // width: '100%'
+        },
+        player = new Vimeo.Player('video', preview),
+        played = false,
+        top = $(window).scrollTop(),
+        start = section.offset().top - 100;
+
+
+
+    // console.log(top);
+    // console.log(start);
+
+    $(window).scroll(function(){
+        top = $(window).scrollTop();
+        start = section.offset().top - 100;
+
+        if (top > start && top < (start + section.height())) {
+            if (played === false) {
+                player.play();
+                played = true;
+                player.setVolume(0);
+                console.log('play');
+            }
+        } else {
+            played = false;
+            player.pause();
+            console.log('pause');
+        }
+    });
+
+
+    fullscr.on('click', function(e) {
+        player.requestFullscreen();
+    });
+
+
+    player.on('fullscreenchange', function(e) {
+        console.log(e.fullscreen);
+        if (e.fullscreen) {
+            player.setVolume(1);
+        } else {
+            player.setVolume(0);
+        }
+        // player.requestFullscreen();
+        // player.setVolume(1);
+    });
+
+    // fullscr.on('click', function() {
+    //     modal.modal('show');
+    // });
+    //
+    // modal.on('show.bs.modal', function() {
+    //     video.appendTo('.videoModal .modal-content');
+    //     player.setVolume(1);
+    //     // player.play();
+    //     played = true;
+    // });
+    //
+    // modal.on('hide.bs.modal', function() {
+    //     video.prependTo('.rezultat__video');
+    //     player.setVolume(0);
+    // });
+
+}
+
+playVideo('#final');

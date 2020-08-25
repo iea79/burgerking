@@ -2,44 +2,201 @@
 //	<div class="video__wrapper js-youtube" id="ID_VIDEO">
 //		iframe c youtube
 // </div>
-.video {
-	margin: 0 -1em;
+// .video {
+// 	margin: 0 -1em;
+//
+// 	@media (min-width: 768px) {
+// 		width: 55em;
+// 		margin: auto auto 2em;
+//
+// 	}
+//
+// 	iframe {
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 		width: 100% !important;
+// 		height: 100% !important;
+// 	}
+//
+// 	&__wrapper {
+// 		border: 1px solid #000;
+// 		position: relative;
+// 		overflow: hidden;
+// 		padding-bottom: 90%;
+// 		background-repeat: no-repeat;
+// 		background-position: center;
+// 		background-size: cover;
+//
+// 		@media (min-width: 768px) {
+// 			border-radius: 1em;
+// 			padding-bottom: 58%;
+//
+// 		}
+//
+// 		iframe {
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+// 	}
+//
+// 	&__play {
+// 		img {
+// 			height: 100%;
+// 		}
+// 		position: absolute;
+// 		top: 22%;
+// 		left: 50%;
+// 		width: 5.3em;
+// 		height: 5.3em;
+// 		margin-top: -2.65em;
+// 		margin-left: -2.65em;
+// 		border-radius: 50%;
+// 		cursor: pointer;
+//
+// 		@media (min-width: 768px) {
+// 			top: 50%;
+// 			left: 50%;
+// 			width: 9.064em;
+// 			height: 9.064em;
+// 			margin-top: -4.54em;
+// 			margin-left: -4.54em;
+//
+// 		}
+//
+// 		&:after,
+// 		&:before {
+// 			content: '';
+// 			position: absolute;
+// 			display: block;
+// 			border-radius: 50%;
+// 			top: 50%;
+// 			left: 50%;
+// 			transform: translate(-50%,-50%),scale(1);
+//
+// 		}
+//
+// 		&:before {
+// 			width: 6.688em;
+// 			height: 6.688em;
+// 			opacity: 0.53;
+// 			border: 0.125em solid #ffd800;
+// 			animation: 1s pulse1 infinite;
+//
+// 			@media (min-width: 768px) {
+// 				width: 11.563em;
+// 				height: 11.563em;
+//
+// 			}
+// 		}
+//
+// 		&:after {
+// 			width: 8.688em;
+// 			height: 8.688em;
+// 			opacity: 0.29;
+// 			border: 0.063em solid #ffd800;
+// 			animation: 1s pulse2 infinite;
+//
+// 			@media (min-width: 768px) {
+// 				width: 14.938em;
+// 				height: 14.938em;
+//
+// 			}
+// 		}
+// 	}
+// }
 
+.rezultat {
+	position: relative;
+	margin: 0 -1em;
+	width: 28.5em;
+	height: 16em;
 	@media (min-width: 768px) {
 		width: 55em;
+		height: 31em;
 		margin: auto auto 2em;
 
 	}
 
-	&__wrapper {
-		position: relative;
-		overflow: hidden;
-		padding-bottom: 90%;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
 
 		@media (min-width: 768px) {
 			border-radius: 1em;
-			padding-bottom: 58%;
-
-		}
-
-		iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
 		}
 	}
 
-	&__play {
+	&__video {
+		border: 1px solid #000;
+		// position: absolute;
+		position: relative;
+		top: -100em!important;
+		left: 2%;
+		width: 96%;
+		height: 21.16em;
+		z-index: 2;
+		margin: auto;
+		// overflow: hidden;
+		// object-fit: cover;
+		// object-position: center;
+		z-index: 1;
+
+		@media (min-width: 768px) {
+			left: 50%;
+			transform: translateX(-50%);
+			top: 7.8em;
+			width: 72.625em;
+			height: 40.56em;
+			margin: 0;
+		}
+
+		.video__prev {
+			max-width: none;
+			height: 100%;
+		}
+
+		// &:hover {
+		// 	.rezultat__close,
+		// 	.rezultat__full {
+		// 		opacity: 1;
+		// 		z-index: 20;
+		// 	}
+		// }
+	}
+
+	&__wrap {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+
+		&:hover {
+			.rezultat__full {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__full {
 		img {
 			height: 100%;
 		}
+		opacity: 0;
 		position: absolute;
-		top: 22%;
+		top: 50%;
 		left: 50%;
 		width: 5.3em;
 		height: 5.3em;
@@ -47,9 +204,11 @@
 		margin-left: -2.65em;
 		border-radius: 50%;
 		cursor: pointer;
+		z-index: 100;
+		transition: opacity 0.3s;
 
 		@media (min-width: 768px) {
-			top: 42%;
+			top: 50%;
 			left: 50%;
 			width: 9.064em;
 			height: 9.064em;
@@ -97,5 +256,18 @@
 
 			}
 		}
+	}
+
+}
+
+.mobile {
+	@media (min-width: 768px) {
+		display: none !important;
+	}
+}
+
+.desktop {
+	@media (max-width: 767px) {
+		display: none !important;
 	}
 }

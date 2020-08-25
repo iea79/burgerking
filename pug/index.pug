@@ -52,10 +52,13 @@ block content
                     .composition__list
                         .composition__item 
                             span Lantmannen Unibake
+                            .composition__location
                         .composition__item 
                             span Белая дача
+                            .composition__location
                         .composition__item
                             span  Мираторг
+                            .composition__location
 
     // end task
 
@@ -179,12 +182,14 @@ block content
             .final__title Финальный этап
             .final__subtitle Соединяем все сюжеты в динамичную историю, добавляем архивные материалы и закадровый голос
 
-            .video(js-youtube id="ID_VIDEO")
-                .video__wrapper
-                    iframe(width='560', height='315', src='https://www.youtube.com/embed/nsLMadVwHxc', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+            .rezultat
+                //- .rezultat__video
+                #video
+                .rezultat__wrap
 
-                .video__play
-                    img(src="img/playVideo.svg", alt="alt")
+                    .rezultat__full
+                        img(src="img/playVideo.svg", alt="alt")
+
 
             .final__img
                 img(src="img/final-bg.png", alt="alt")
@@ -211,3 +216,11 @@ block content
             .video__wrapper
                 #short-video
     // End modal previwe
+
+    //- // Begin Modal videoModal
+    //- .modal.fade.videoModal#videoModal
+    //-     .modal-dialog
+    //-         .modal-content
+    //-             a.rezultat__close(href="#" data-dismiss="modal")
+    //- 
+    //- // End modal videoModal
