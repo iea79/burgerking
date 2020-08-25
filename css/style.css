@@ -555,8 +555,8 @@ body {
 .rezultat {
   position: relative;
   margin: 0 -1em;
-  width: 28.5em;
-  height: 16em;
+  width: 30em;
+  height: 17em;
 }
 @media (min-width: 768px) {
   .rezultat {
