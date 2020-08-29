@@ -126,71 +126,6 @@ function checkOnResize() {
     // fontResize();
 }
 
-// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-function stikyMenu() {
-    let HeaderTop = $('header').offset().top + $('.home').innerHeight();
-    let currentTop = $(window).scrollTop();
-
-    setNavbarPosition();
-
-    $(window).scroll(function(){
-        setNavbarPosition();
-    });
-
-    function setNavbarPosition() {
-        currentTop = $(window).scrollTop();
-
-        if( currentTop > HeaderTop ) {
-            $('header').addClass('stiky');
-        } else {
-            $('header').removeClass('stiky');
-        }
-
-        $('.navbar__link').each(function(index, el) {
-            let section = $(this).attr('href');
-
-            if ($('section').is(section)) {
-                let offset = $(section).offset().top;
-
-                if (offset <= currentTop && offset + $(section).innerHeight() > currentTop) {
-                    $(this).addClass('active');
-                } else {
-                    $(this).removeClass('active');
-                }
-            }
-        });
-    }
-};
-
-function openMobileNav() {
-    $('.navbar__toggle').on('click', function() {
-        var wrapp = $('.nav');
-
-        wrapp.toggleClass('open');
-    });
-};
-openMobileNav();
-
-// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-function srollToId() {
-    $('[data-scroll-to]').click( function(){
-        var scroll_el = $(this).attr('href');
-        if ($(scroll_el).length != 0) {
-            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-        }
-        return false;
-    });
-}
-
-function fontResize() {
-    var windowWidth = $(window).width();
-    if (windowWidth >= 1200) {
-    	var fontSize = windowWidth/19.05;
-    } else if (windowWidth < 1200) {
-    	var fontSize = 60;
-    }
-	$('body').css('fontSize', fontSize + '%');
-}
 
 // Проверка направления прокрутки вверх/вниз
 function checkDirectionScroll() {
@@ -210,41 +145,6 @@ function checkDirectionScroll() {
 }
 checkDirectionScroll();
 
-// Видео youtube для страницы
-// function uploadYoutubeVideo() {
-//     if ($(".js-youtube")) {
-//
-//         $(".js-youtube").each(function () {
-//             // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-//             $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
-//
-//             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-//             $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
-//
-//         });
-//
-//         $('.video__play, .video__prev').on('click', function () {
-//             // создаем iframe со включенной опцией autoplay
-//             let wrapp = $(this).closest('.js-youtube'),
-//                 videoId = wrapp.attr('id'),
-//                 iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-//
-//             if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
-//
-//             // Высота и ширина iframe должны быть такими же, как и у родительского блока
-//             let iframe = $('<iframe/>', {
-//                 'frameborder': '0',
-//                 'src': iframe_url,
-//             })
-//
-//             // Заменяем миниатюру HTML5 плеером с YouTube
-//             $(this).closest('.video__wrapper').append(iframe);
-//
-//         });
-//     }
-// };
-
-
 var preview = {
     id: 427323376,
 };
@@ -259,19 +159,6 @@ $('#previwe').on('hide.bs.modal', function() {
     player1.pause();
 });
 
-// var fullVideo = {
-//     id: 445510302,
-// };
-//
-// var player2 = new Vimeo.Player('video', fullVideo);
-//
-// $('#play').on('show.bs.modal', function() {
-//     player2.play();
-// });
-//
-// $('#play').on('hide.bs.modal', function() {
-//     player2.pause();
-// });
 
 function playVideo(box) {
     let section = $(box),
@@ -291,8 +178,6 @@ function playVideo(box) {
 
 
 
-    // console.log(top);
-    // console.log(start);
 
     $(window).scroll(function(){
         top = $(window).scrollTop();
@@ -325,25 +210,7 @@ function playVideo(box) {
         } else {
             player.setVolume(0);
         }
-        // player.requestFullscreen();
-        // player.setVolume(1);
     });
-
-    // fullscr.on('click', function() {
-    //     modal.modal('show');
-    // });
-    //
-    // modal.on('show.bs.modal', function() {
-    //     video.appendTo('.videoModal .modal-content');
-    //     player.setVolume(1);
-    //     // player.play();
-    //     played = true;
-    // });
-    //
-    // modal.on('hide.bs.modal', function() {
-    //     video.prependTo('.rezultat__video');
-    //     player.setVolume(0);
-    // });
 
 }
 

@@ -2347,8 +2347,3 @@ body {
     transition: transform 0.1s linear;
   }
 }
-@media (max-width: 767px) {
-  .parallaxItem, .parallaxMouse {
-    display: none;
-  }
-}
