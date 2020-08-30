@@ -59,6 +59,7 @@ $(document).ready(function() {
         offset:       wowOffset,          // distance to the element when triggering the animation (default is 0)
     });
     wow2.init();
+
 });
 
 

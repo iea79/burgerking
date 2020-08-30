@@ -7,3 +7,9 @@
 @include font-face("Lilita One Rus", '../fonts/LilitaOne/LilitaOneRus', normal, normal);
 
 @include font-face("Muller", '../fonts/Muller/MullerRegular', normal, normal);
+
+@font-face {
+    font-family: "Berlingske Sans";
+    src: url("//db.onlinewebfonts.com/t/6cd0079deb96856f116444a35ce6001f.eot");
+    src: url("//db.onlinewebfonts.com/t/6cd0079deb96856f116444a35ce6001f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6cd0079deb96856f116444a35ce6001f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6cd0079deb96856f116444a35ce6001f.woff") format("woff"), url("//db.onlinewebfonts.com/t/6cd0079deb96856f116444a35ce6001f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6cd0079deb96856f116444a35ce6001f.svg#Berlingske Sans") format("svg");
+}

@@ -23,7 +23,7 @@
     }
 
     &__content {
-        max-width: 75em;
+        max-width: 71.5em;
         margin-left: auto;
         margin-right: auto;
         padding: 0 1em 2em;
@@ -50,7 +50,7 @@
 
     &__body {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
 
@@ -59,6 +59,7 @@
         @media (min-width: 768px) {
             flex-direction: row;
             margin-bottom: 0;
+            font-size: 0.9em;
 
         }
     }
@@ -160,8 +161,8 @@
     &__title {
         color: #ffffff;
         font-family: "Berlingske Sans";
-        font-size: 1em;
-        font-weight: 700;
+        font-size: 1.3em;
+        font-weight: 800;
         margin-bottom: 1em;
     }
 
@@ -170,6 +171,7 @@
         height: 32.688em;
         @media (min-width: 768px) {
             width: 32.375em;
+            margin-bottom: 2em;
         }
     }
 
@@ -186,6 +188,7 @@
     @media (min-width: 768px) {
         margin-top: 0;
         height: 46em;
+        right: 5em;
 
     }
 
@@ -568,7 +571,8 @@
     padding: 3em 0;
 
     @media (min-width: 768px) {
-        padding: 8em 0 0;
+        padding: 9em 0 0;
+        font-size: 0.9em;
 
     }
 
@@ -621,7 +625,7 @@
     @media (min-width: 768px) {
         &__title {
             text-align: center;
-            font-size: 4.25em;
+            font-size: 4.45em;
         }
 
         &__titleTop {
@@ -1592,6 +1596,7 @@
             width: 100em;
             height: 80em;
             z-index: -1;
+            // padding-top: 5em;
 
             &-left {
                 background: url("../img/final-bg.png") 0 0 no-repeat;
@@ -1670,6 +1675,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 6em;
 
         }
 
@@ -1753,7 +1759,7 @@
         transform: translateY(1.6em);
     }
 
-    2% {
+    30% {
         opacity: 1;
     }
 
