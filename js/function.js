@@ -171,46 +171,48 @@ function playVideo(box) {
             // autoplay: false,
             // width: '100%'
         },
-        player = new Vimeo.Player('video', preview),
-        played = false,
-        top = $(window).scrollTop(),
-        start = section.offset().top - 100;
+        player;
+        // played = false,
+        // top = $(window).scrollTop(),
+        // start = section.offset().top - 100;
 
 
 
 
-    $(window).scroll(function(){
-        top = $(window).scrollTop();
-        start = section.offset().top - 100;
-
-        if (top > start && top < (start + section.height())) {
-            if (played === false) {
-                player.play();
-                played = true;
-                player.setVolume(0);
-                console.log('play');
-            }
-        } else {
-            played = false;
-            player.pause();
-            console.log('pause');
-        }
-    });
+    // $(window).scroll(function(){
+    //     top = $(window).scrollTop();
+    //     start = section.offset().top - 100;
+    //
+    //     if (top > start && top < (start + section.height())) {
+    //         if (played === false) {
+    //             player.play();
+    //             played = true;
+    //             player.setVolume(0);
+    //             console.log('play');
+    //         }
+    //     } else {
+    //         played = false;
+    //         player.pause();
+    //         console.log('pause');
+    //     }
+    // });
 
 
     fullscr.on('click', function(e) {
-        player.requestFullscreen();
+        player = new Vimeo.Player('video', preview);
+        player.play();
+        fullscr.hide();
     });
 
 
-    player.on('fullscreenchange', function(e) {
-        console.log(e.fullscreen);
-        if (e.fullscreen) {
-            player.setVolume(1);
-        } else {
-            player.setVolume(0);
-        }
-    });
+    // player.on('fullscreenchange', function(e) {
+    //     console.log(e.fullscreen);
+    //     if (e.fullscreen) {
+    //         player.setVolume(1);
+    //     } else {
+    //         player.setVolume(0);
+    //     }
+    // });
 
 }
 

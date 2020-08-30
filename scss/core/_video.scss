@@ -47,13 +47,13 @@
 		width: 100% !important;
 		height: 100% !important;
 
-		@media (min-width: 768px) {
-			border-radius: 1em;
-		}
+		// @media (min-width: 768px) {
+		// 	border-radius: 1em;
+		// }
 	}
 
 	&__video {
-		border: 1px solid #000;
+		// border: 1px solid #000;
 		// position: absolute;
 		position: relative;
 		top: -100em!important;
@@ -91,25 +91,34 @@
 	}
 
 	&__wrap {
+		background: url("../img/play-bg.png") 0 0 no-repeat;
+		background-size: cover;
 		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		z-index: 0;
+		margin: 0 -1em;
 
-		&:hover {
-			.rezultat__full {
-				opacity: 1;
-			}
+		@media (min-width: 768px) {
+			border-radius: 1em;
+			margin: 0;
+
 		}
+
+		// &:hover {
+		// 	.rezultat__full {
+		// 		opacity: 1;
+		// 	}
+		// }
 	}
 
 	&__full {
 		img {
 			height: 100%;
 		}
-		opacity: 0;
+		// opacity: 0;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -120,7 +129,7 @@
 		border-radius: 50%;
 		cursor: pointer;
 		z-index: 100;
-		transition: opacity 0.3s;
+		// transition: opacity 0.3s;
 
 		@media (min-width: 768px) {
 			top: 50%;

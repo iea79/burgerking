@@ -574,13 +574,7 @@ body {
   width: 100% !important;
   height: 100% !important;
 }
-@media (min-width: 768px) {
-  .rezultat iframe {
-    border-radius: 1em;
-  }
-}
 .rezultat__video {
-  border: 1px solid #000;
   position: relative;
   top: -100em !important;
   left: 2%;
@@ -605,18 +599,23 @@ body {
   height: 100%;
 }
 .rezultat__wrap {
+  background: url("../img/play-bg.png") 0 0 no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 0;
+  margin: 0 -1em;
 }
-.rezultat__wrap:hover .rezultat__full {
-  opacity: 1;
+@media (min-width: 768px) {
+  .rezultat__wrap {
+    border-radius: 1em;
+    margin: 0;
+  }
 }
 .rezultat__full {
-  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -627,7 +626,6 @@ body {
   border-radius: 50%;
   cursor: pointer;
   z-index: 100;
-  transition: opacity 0.3s;
 }
 .rezultat__full img {
   height: 100%;
