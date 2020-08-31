@@ -148,6 +148,7 @@ checkDirectionScroll();
 
 var preview = {
     id: 427323376,
+    title: false,
 };
 
 var player1 = new Vimeo.Player('short-video', preview);
@@ -167,7 +168,8 @@ function playVideo(box) {
         preview = {
             id: 451083510,
             // loop: false,
-            volume: 0,
+            // volume: 0,
+            title: false,
             // controls: true,
             // autoplay: false,
             // width: '100%'
